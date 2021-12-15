@@ -35,7 +35,7 @@ static int sleepTime = 1000;
 
 ## Usage
 
-To run the Data Collector Module you must change directory into the `example` sub-directory of the root module folder.
+To run this code you must change directory into the `example` sub-directory of the root module folder.
 
 To start the module, use the following command, replacing 'IP_ADDRESS' with the IP of your Speedway Revolution reader.
 
