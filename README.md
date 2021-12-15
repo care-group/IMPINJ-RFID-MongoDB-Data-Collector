@@ -1,8 +1,30 @@
 # IMPINJ RFID MongoDB Data Collector
 
-## Usage
+## Configuration
+
+### Environment
 
 You will require Apache Ant, an up-to-date Java runtime environemt (JRE), and a local install of MongoDB server. You **must** start an instance of MongoDB server *before* running DCM.
+
+### Tags
+
+You must list all tags for which you wish to record data in ```examples/tags.txt```. The tool will create a record for each tag at every snapshot. An example of the tags file is as follow:
+
+```
+300833B2DDD9014011110001
+300833B2DDD9014011110002
+300833B2DDD9014011110003
+...
+```
+
+Optionally, if you wish to restrict recording for specific tags to one or two antennas, you may specify which tags as follows:
+
+```
+300833B2DDD9014011110001:1:2 // restricts to antenna 1 and 2
+...
+```
+
+## Usage
 
 To run the Data Collector Module you must change directory into the `example` sub-directory of the root module folder.
 
