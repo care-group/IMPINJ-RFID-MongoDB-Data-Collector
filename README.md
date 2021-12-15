@@ -2,7 +2,7 @@
 
 ## Configuration
 
-### Environment
+### Environment
 
 You will require Apache Ant, an up-to-date Java runtime environemt (JRE), and a local install of MongoDB server. You **must** start an instance of MongoDB server *before* running DCM.
 
@@ -22,6 +22,15 @@ Optionally, if you wish to restrict recording for specific tags to one or two an
 ```
 300833B2DDD9014011110001:1:2 // restricts to antenna 1 and 2
 ...
+```
+
+### Rate
+
+By default, the data collector will save a snapshot of tag states every second and will run for a maximum of 3600 seconds (1 hour). You can customise these values by editing the following variables in ```examples/source/org/impinj/llrp/ltk/examples/datacollector/DataCollector.java```:
+
+```
+static int numSnapshots = 3600;
+static int sleepTime = 1000;
 ```
 
 ## Usage
